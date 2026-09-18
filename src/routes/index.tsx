@@ -1,24 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
-export const Route = createFileRoute("/")({
-  component: Index,
-});
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
+import "../styles.css";
+export const Route=createFileRoute("/")({component:Index});
+function Index(){return (<div className="nk"><nav><b>🧠 Neuro Kids</b><a href="#plans">Get Started</a></nav><section className="hero"><div><small>SMART LEARNING FOR GROWING MINDS</small><h1>Help your child <i>learn, grow & thrive.</i></h1><p>Playful digital learning resources designed to make everyday learning more engaging, purposeful and fun for children.</p><a className="btn" href="#plans">Get Neuro Kids →</a><p className="trust">✓ Digital access &nbsp; ✓ Parent-friendly &nbsp; ✓ Made for families</p></div><div className="visual"><div className="brain">🧠</div><span>🎯 Focus</span><span>💡 Learn</span><span>⭐ Grow</span></div></section><section className="features"><div><b>01</b><strong>Playful</strong><small>Learning made enjoyable</small></div><div><b>02</b><strong>Practical</strong><small>Simple activities for home</small></div><div><b>03</b><strong>Flexible</strong><small>Use it at your own pace</small></div></section><section className="content"><small>HOW IT WORKS</small><h2>A simple way to bring purposeful learning into your child's day.</h2><div className="cards"><article><em>📲</em><h3>Get instant access</h3><p>Choose your plan and access your digital Neuro Kids resources.</p></article><article><em>🎨</em><h3>Choose an activity</h3><p>Pick activities that fit your child's interests and routine.</p></article><article><em>🌱</em><h3>Learn through play</h3><p>Turn everyday moments into opportunities for exploration.</p></article></div></section><section id="plans" className="pricing"><small>CHOOSE YOUR PLAN</small><h2>Start with the plan that fits your family.</h2><p>Simple pricing in South African Rand.</p><div className="plans"><article><h3>Basic <b>R67</b></h3><p>Everything you need to get started.</p><ul><li>✓ Core Neuro Kids activities</li><li>✓ Daily learning exercises</li><li>✓ Parent guidance</li><li>✓ Instant digital access</li></ul><button>Choose Basic — R67</button></article><article className="premium"><label>MOST POPULAR</label><h3>Premium <b>R99</b></h3><p>The complete Neuro Kids experience.</p><ul><li>✓ Everything in Basic</li><li>✓ Extended activity library</li><li>✓ Bonus learning resources</li><li>✓ Extra parent guidance</li><li>✓ Premium updates</li></ul><button>Choose Premium — R99 →</button></article></div><small>🔒 Secure digital checkout • Prices shown in ZAR</small></section><section className="dark"><h2>Small learning moments can become big building blocks for a child's future.</h2><p>Neuro Kids • Built for everyday family learning</p></section><section className="faq"><small>FAQ</small><h2>Questions? We've got you.</h2><details open><summary>What is Neuro Kids?</summary><p>Neuro Kids is a digital collection of playful learning resources and activities designed to help parents create engaging learning moments at home.</p></details><details><summary>How do I get access?</summary><p>After choosing your plan and completing checkout, you'll receive instructions for accessing your digital resources.</p></details><details><summary>Is Neuro Kids a medical programme?</summary><p>No. Neuro Kids is an educational resource, not a medical treatment, diagnosis or substitute for professional care.</p></details><details><summary>Which plan should I choose?</summary><p>Basic includes the core experience. Premium adds additional activities and bonus resources.</p></details></section><footer><b>🧠 Neuro Kids</b><span>Playful learning for growing minds. • South Africa</span></footer></div>);}

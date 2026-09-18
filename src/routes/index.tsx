@@ -4,162 +4,81 @@ import "../styles.css";
 export const Route = createFileRoute("/")({ component: Index });
 
 const images = {
-  hero: "https://images.unsplash.com/photo-1771765754567-e7b5bbf6a3b3?auto=format&fit=crop&fm=jpg&q=78&w=1100",
-  learning: "https://images.unsplash.com/photo-1780844824578-d0b1a5b4b329?auto=format&fit=crop&fm=jpg&q=78&w=1000",
-  together: "https://images.unsplash.com/photo-1637148659333-aa7f09fc2d13?auto=format&fit=crop&fm=jpg&q=78&w=900",
-  parent: "https://images.unsplash.com/photo-1504159506876-f8338247a14a?auto=format&fit=crop&fm=jpg&q=78&w=1000",
-  activity: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&fm=jpg&q=78&w=900",
-  reading: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&fm=jpg&q=78&w=900",
+  hero:"https://images.unsplash.com/photo-1771765754567-e7b5bbf6a3b3?auto=format&fit=crop&fm=jpg&q=78&w=1100",
+  activity:"https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&fm=jpg&q=78&w=1000",
+  learning:"https://images.unsplash.com/photo-1780844824578-d0b1a5b4b329?auto=format&fit=crop&fm=jpg&q=78&w=1000",
+  parent:"https://images.unsplash.com/photo-1504159506876-f8338247a14a?auto=format&fit=crop&fm=jpg&q=78&w=1000",
+  reading:"https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&fm=jpg&q=78&w=1000"
 };
 
-function Index() {
-  return (
-    <div className="nk">
-      <nav className="nav">
-        <a className="brand" href="#home">🧠 <span>Neuro Kids</span></a>
-        <div className="nav-links">
-          <a href="#benefits">Benefits</a>
-          <a href="#how">How It Works</a>
-          <a href="#faq">FAQ</a>
-        </div>
-        <a className="nav-cta" href="#offer">Get Started</a>
-      </nav>
+function Index(){
+ return <div className="nk">
+  <div className="topbar">🧠 NEURO KIDS • DIGITAL LEARNING FOR GROWING MINDS</div>
+  <nav className="nav"><a className="brand" href="#home">🧠 <span>Neuro Kids</span></a><div className="nav-links"><a href="#inside">What's Inside</a><a href="#how">How It Works</a><a href="#faq">FAQ</a></div><a className="nav-cta" href="#offer">Get Access</a></nav>
 
-      <main>
-        <section id="home" className="hero">
-          <div className="hero-copy reveal">
-            <span className="eyebrow">SMART LEARNING FOR GROWING MINDS</span>
-            <h1>Unlock Your Child’s <span>Potential</span> With Neuro Kids</h1>
-            <p className="lead">Fun, engaging activities designed to help children learn, think, explore and develop essential skills while having fun.</p>
-            <div className="hero-actions">
-              <a className="btn" href="#offer">Discover Neuro Kids <span>→</span></a>
-              <a className="text-btn" href="#how">See How It Works <span>▶</span></a>
-            </div>
-            <div className="trust-row">
-              <span>✓ Fun & Educational</span><span>✓ Designed for Kids</span><span>✓ Parent-Friendly</span>
-            </div>
-          </div>
-          <div className="hero-visual reveal">
-            <img src={images.hero} alt="Children enjoying a learning activity together" />
-            <div className="floating-card fc-one">🧠 <b>Think</b><small>Curiosity in action</small></div>
-            <div className="floating-card fc-two">🎨 <b>Create</b><small>Learning through play</small></div>
-            <div className="circle-note">Made for<br /><strong>growing minds</strong></div>
-          </div>
-        </section>
-
-        <section className="mini-strip">
-          <div><strong>Playful</strong><span>Learning made enjoyable</span></div>
-          <div><strong>Practical</strong><span>Easy activities for home</span></div>
-          <div><strong>Flexible</strong><span>Learn at your own pace</span></div>
-        </section>
-
-        <section className="section problem">
-          <div className="section-head reveal">
-            <span className="eyebrow">WHY IT MATTERS</span>
-            <h2>Learning <span>Should Be Fun</span></h2>
-            <p>Children learn best when they are engaged, curious and enjoying the experience. Neuro Kids turns everyday learning into something they want to come back to.</p>
-          </div>
-          <div className="three-cards">
-            <article className="feature-card reveal"><div className="icon">💪</div><h3>Build Confidence</h3><p>Give children positive opportunities to try, discover and celebrate small wins.</p></article>
-            <article className="feature-card reveal"><div className="icon">🎯</div><h3>Improve Focus</h3><p>Encourage children to slow down, concentrate and complete engaging activities.</p></article>
-            <article className="feature-card reveal"><div className="icon">🎨</div><h3>Encourage Creativity</h3><p>Open-ended activities invite children to imagine, make choices and express ideas.</p></article>
-          </div>
-        </section>
-
-        <section className="meet">
-          <div className="meet-image reveal"><img src={images.learning} alt="Children participating in a hands-on educational activity" /><span>Learn • Explore • Create</span></div>
-          <div className="meet-copy reveal"><span className="eyebrow">WHAT IS NEURO KIDS?</span><h2>Meet <span>Neuro Kids</span></h2><p>Neuro Kids is an engaging learning experience created to make children's development more exciting. Through fun activities, challenges and interactive learning, children can explore important skills in an enjoyable way.</p><div className="check-list"><span>✓ Child-friendly activities</span><span>✓ Simple for families to enjoy</span><span>✓ Designed around curiosity</span></div><a className="btn" href="#benefits">Explore the benefits →</a></div>
-        </section>
-
-        <section id="benefits" className="section benefits">
-          <div className="section-head centered reveal"><span className="eyebrow">THE NEURO KIDS EXPERIENCE</span><h2>More Than Just <span>Learning</span></h2><p>Build positive learning moments across skills children use every day.</p></div>
-          <div className="benefit-grid">
-            {[
-              ["🧠","Cognitive Development","Activities that encourage thinking, remembering and discovering."],
-              ["🎯","Better Focus","Simple challenges that invite children to pay attention and stay engaged."],
-              ["🎨","Creativity","Room to draw, imagine, experiment and express ideas."],
-              ["📚","Learning Skills","Practice useful habits through enjoyable, age-appropriate activities."],
-              ["💡","Problem Solving","Fun challenges that encourage children to think about different solutions."],
-              ["😊","Confidence","Celebrate effort and progress while making learning feel positive."]
-            ].map(([icon,title,copy]) => <article className="benefit-card reveal" key={title}><div>{icon}</div><h3>{title}</h3><p>{copy}</p></article>)}
-          </div>
-        </section>
-
-        <section id="how" className="how">
-          <div className="section-head centered reveal"><span className="eyebrow">HOW IT WORKS</span><h2>Three Steps. <span>One Happy Learner.</span></h2></div>
-          <div className="steps">
-            <article className="step reveal"><b>01</b><div className="step-icon">🔎</div><h3>Explore</h3><p>Children discover fun and engaging activities.</p></article>
-            <article className="step reveal"><b>02</b><div className="step-icon">🧩</div><h3>Learn</h3><p>They develop useful skills through interactive challenges.</p></article>
-            <article className="step reveal"><b>03</b><div className="step-icon">🌱</div><h3>Grow</h3><p>They build confidence, curiosity and better learning habits.</p></article>
-          </div>
-        </section>
-
-        <section className="gallery section">
-          <div className="section-head reveal"><span className="eyebrow">LEARNING IN ACTION</span><h2>Bright moments. <span>Growing minds.</span></h2><p>A visual glimpse of the kind of reading, creating, problem-solving and connection Neuro Kids is made to encourage.</p></div>
-          <div className="gallery-grid">
-            <figure className="g-large reveal"><img src={images.together} alt="Children learning together" /><figcaption>Learn together <small>Curiosity grows through connection</small></figcaption></figure>
-            <figure className="reveal"><img src={images.activity} alt="Child engaged in a playful activity" /><figcaption>Play & discover</figcaption></figure>
-            <figure className="reveal"><img src={images.reading} alt="Children reading in a classroom" /><figcaption>Read & explore</figcaption></figure>
-          </div>
-        </section>
-
-        <section className="parent-section">
-          <div className="parent-copy reveal"><span className="eyebrow">FOR THE WHOLE FAMILY</span><h2>Made With <span>Parents</span> in Mind</h2><p>We believe children deserve learning experiences that are fun, meaningful and easy to enjoy. Neuro Kids gives parents a simple way to encourage learning and development at home.</p><div className="parent-points"><span>✓ Easy to introduce at home</span><span>✓ Encourages shared learning moments</span><span>✓ Designed to fit everyday routines</span></div></div>
-          <div className="parent-image reveal"><img src={images.parent} alt="Parent and child enjoying time together" /></div>
-        </section>
-
-        <section className="section why">
-          <div className="section-head centered reveal"><span className="eyebrow">WHY PARENTS CHOOSE NEURO KIDS</span><h2>Simple. Engaging. <span>Meaningful.</span></h2></div>
-          <div className="four-cards">
-            <article className="why-card reveal"><span>01</span><h3>Fun Activities</h3><p>Learning feels like play.</p></article>
-            <article className="why-card reveal"><span>02</span><h3>Easy to Use</h3><p>Simple for parents and children.</p></article>
-            <article className="why-card reveal"><span>03</span><h3>Engaging Learning</h3><p>Designed to keep children interested.</p></article>
-            <article className="why-card reveal"><span>04</span><h3>Made for Growing Minds</h3><p>Encourages curiosity and exploration.</p></article>
-          </div>
-        </section>
-
-        <section className="testimonials">
-          <div className="section-head centered reveal"><span className="eyebrow">PARENT VOICES</span><h2>What parents <span>love</span></h2><p className="sample-note">Sample testimonials — replace with verified customer feedback when available.</p></div>
-          <div className="testimonial-grid">
-            {[
-              ["Nandi M.","Cape Town","“My child absolutely loves the activities. Learning has become something they look forward to every day.”"],
-              ["Thabo K.","Johannesburg","“The activities are easy to understand and gave us a fun way to spend learning time together at home.”"],
-              ["Lerato S.","Pretoria","“I love how simple it is to bring a little more curiosity and creativity into our routine.”"]
-            ].map(([name,place,quote],i) => <article className="testimonial reveal" key={name}><div className="avatar">{["NM","TK","LS"][i]}</div><div className="stars">★★★★★</div><p>{quote}</p><strong>{name}</strong><small>{place} · Sample testimonial</small></article>)}
-          </div>
-        </section>
-
-        <section id="offer" className="offer">
-          <div className="offer-head reveal"><span className="eyebrow light">THE NEURO KIDS OFFER</span><h2>Give Your Child a More <strong>Exciting Way to Learn</strong></h2><p>Choose the option that fits your family. Prices are shown in South African Rand.</p></div>
-          <div className="price-card reveal">
-            <div className="price-info"><span className="offer-tag">NEURO KIDS</span><h3>Educational activities for growing minds</h3><p>Fun learning resources with a child-friendly design and an easy experience for parents.</p><ul><li>✓ Educational activities</li><li>✓ Fun learning experience</li><li>✓ Child-friendly design</li><li>✓ Easy for parents</li></ul></div>
-            <div className="price-action"><div className="price">R67 <small>Basic</small></div><a className="price-btn" href="#contact">Get Neuro Kids Today →</a><div className="reassurance">🔒 Secure checkout • Instant access • Parent-friendly</div></div>
-          </div>
-          <p className="offer-foot">Premium option available at <strong>R99</strong> with additional Neuro Kids resources.</p>
-        </section>
-
-        <section id="faq" className="section faq">
-          <div className="section-head centered reveal"><span className="eyebrow">FAQ</span><h2>Questions? <span>We've got you.</span></h2></div>
-          <div className="faq-list reveal">
-            <details open><summary>What is Neuro Kids?</summary><p>Neuro Kids is an educational learning experience with playful activities designed to help parents create engaging learning moments at home.</p></details>
-            <details><summary>What age group is Neuro Kids suitable for?</summary><p>The suitable age range depends on the specific Neuro Kids activity pack. Check the product details before purchasing for the exact age guidance.</p></details>
-            <details><summary>How does Neuro Kids help children learn?</summary><p>It uses engaging activities and challenges to encourage focus, creativity, problem solving and other useful learning skills.</p></details>
-            <details><summary>Is it easy for parents to use?</summary><p>Yes. The experience is designed to be straightforward for parents and enjoyable for children.</p></details>
-            <details><summary>How do I get access?</summary><p>After checkout, follow the access instructions provided with your Neuro Kids purchase.</p></details>
-          </div>
-        </section>
-
-        <section id="contact" className="final-cta">
-          <div className="final-copy reveal"><span className="eyebrow light">READY TO GET STARTED?</span><h2>Make Learning More Fun for Your Child</h2><p>Give your child an engaging way to explore, learn and grow.</p><a className="btn white-btn" href="#offer">Discover Neuro Kids →</a></div>
-          <img src={images.hero} alt="Happy children enjoying learning together" className="final-image reveal" />
-        </section>
-      </main>
-
-      <footer>
-        <div><a className="brand" href="#home">🧠 <span>Neuro Kids</span></a><p>Playful learning for growing minds.</p></div>
-        <div className="footer-links"><a href="#home">Home</a><a href="#benefits">Benefits</a><a href="#how">How It Works</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
-        <small>© 2026 Neuro Kids. All rights reserved.</small>
-      </footer>
+  <main>
+   <section id="home" className="sales-hero">
+    <div className="hero-copy reveal"><span className="eyebrow">FOR PARENTS OF GROWING MINDS</span>
+     <h1>Help Your Child Build <span>Focus, Confidence & Learning Skills</span> — Through Play.</h1>
+     <p className="lead">Fun, screen-free activities that turn a few minutes at home into meaningful learning moments.</p>
+     <ul className="hero-bullets"><li>✓ 100+ engaging printable activities</li><li>✓ Focus, memory, logic, creativity & more</li><li>✓ Simple enough for parents to use at home</li></ul>
+     <a className="btn" href="#offer">Discover Neuro Kids →</a>
+     <div className="micro-trust">🔒 Secure checkout &nbsp; • &nbsp; ⚡ Instant digital access &nbsp; • &nbsp; 🖨️ Print & play</div>
     </div>
-  );
+    <div className="sales-hero-visual reveal"><img src={images.hero} alt="African children enjoying a learning activity"/><div className="product-sticker">100+<small>ACTIVITIES</small></div><div className="instant-badge">⚡ Instant Access<br/><small>Digital • Printable • Screen-free</small></div></div>
+   </section>
+
+   <section className="trust-bar"><div>⚡ <b>Ready in minutes</b><small>No complicated prep</small></div><div>🖨️ <b>Printable</b><small>Use again and again</small></div><div>👨‍👩‍👧 <b>10 minutes a day</b><small>Easy family routine</small></div><div>♾️ <b>Lifetime access</b><small>Learn at your pace</small></div></section>
+
+   <section className="pain section"><div className="section-head centered reveal"><span className="eyebrow">DOES THIS SOUND FAMILIAR?</span><h2>When learning feels like a <span>daily struggle...</span></h2><p>Children can lose interest, get distracted or feel frustrated. Parents can be left wondering what to try next.</p></div>
+    <div className="pain-grid"><article><b>😩</b><h3>“They lose focus so quickly.”</h3><p>Keeping attention on one activity can feel difficult.</p></article><article><b>📱</b><h3>“Screens are always the easiest option.”</h3><p>You want something more hands-on and engaging.</p></article><article><b>😤</b><h3>“Homework becomes frustrating.”</h3><p>You want learning time to feel calmer and more positive.</p></article></div>
+   </section>
+
+   <section className="solution"><div className="solution-copy reveal"><span className="eyebrow">MEET NEURO KIDS</span><h2>Imagine learning that <span>feels like play.</span></h2><p>Neuro Kids brings together engaging activities designed around focus, memory, logic, creativity and learning skills. Children get something enjoyable to do, while parents get a simple resource they can use at home.</p><div className="check-list"><span>✓ Fun and engaging activities</span><span>✓ Screen-free learning option</span><span>✓ Child-friendly and easy to follow</span><span>✓ Designed for everyday family routines</span></div><a className="btn" href="#inside">See what's included →</a></div><div className="solution-image reveal"><img src={images.learning} alt="Children learning together with educational materials"/></div></section>
+
+   <section id="inside" className="section inside"><div className="section-head centered reveal"><span className="eyebrow">EVERYTHING IN ONE PLACE</span><h2>What Your Child Gets With <span>Neuro Kids</span></h2><p>A varied collection so learning never has to feel repetitive.</p></div>
+    <div className="inside-grid">{[
+     ["🎯","Focus & Attention","Activities that invite children to concentrate and complete a task."],
+     ["🧠","Memory Building","Playful exercises for remembering, observing and connecting ideas."],
+     ["🔷","Shapes & Patterns","Visual activities that encourage recognition and thinking."],
+     ["🧩","Logic & Sequences","Simple challenges that encourage reasoning and problem solving."],
+     ["✏️","Tracing & Fine Motor","Hands-on practice for drawing, tracing and coordination."],
+     ["🎨","Colors & Matching","Fun matching activities that encourage observation and creativity."],
+     ["👀","Hand-Eye Coordination","Activities designed around movement, attention and accuracy."],
+     ["🌈","Screen-Free Play","A printable alternative for meaningful offline activity."]
+    ].map(([i,t,p])=><article className="inside-card reveal" key={t}><div>{i}</div><h3>{t}</h3><p>{p}</p></article>)}</div>
+   </section>
+
+   <section className="visual-proof"><div className="visual-proof-copy reveal"><span className="eyebrow">LEARNING IN ACTION</span><h2>Less scrolling. More <span>doing.</span></h2><p>Print an activity, sit together and let your child explore. The goal is to make learning simple enough to become part of real family life.</p><div className="stat-pills"><span>100+ Activities</span><span>Screen-free</span><span>Parent-friendly</span></div></div><div className="visual-mosaic"><img src={images.activity} alt="Child doing a playful educational activity"/><img src={images.reading} alt="Children reading and learning"/></div></section>
+
+   <section className="how" id="how"><div className="section-head centered reveal"><span className="eyebrow">HOW IT WORKS</span><h2>Just <span>3 simple steps.</span></h2></div><div className="steps"><article className="step reveal"><b>01</b><div className="step-icon">🖨️</div><h3>Choose & Print</h3><p>Pick an activity and get it ready in minutes.</p></article><article className="step reveal"><b>02</b><div className="step-icon">🧩</div><h3>Play & Learn</h3><p>Let your child work through a fun, focused challenge.</p></article><article className="step reveal"><b>03</b><div className="step-icon">🌱</div><h3>Repeat & Grow</h3><p>Reuse activities and build positive learning routines.</p></article></div></section>
+
+   <section className="parent-section"><div className="parent-image reveal"><img src={images.parent} alt="Parent and child learning together"/></div><div className="parent-copy reveal"><span className="eyebrow">MADE FOR REAL FAMILIES</span><h2>Simple for <span>parents.</span> Fun for kids.</h2><p>You don't need teaching experience or complicated preparation. Neuro Kids is designed to make it easier to introduce meaningful learning moments into your child's day.</p><div className="check-list"><span>✓ Easy to understand</span><span>✓ Flexible at home</span><span>✓ Great for shared parent-child time</span></div></div></section>
+
+   <section className="testimonials"><div className="section-head centered reveal"><span className="eyebrow">PARENT VOICES</span><h2>Real families deserve <span>real proof.</span></h2><p className="sample-note">Sample testimonials shown for layout purposes — replace with verified customer reviews.</p></div><div className="testimonial-grid">{[
+    ["Nandi M.","Cape Town","“My child absolutely loves the activities. Learning has become something they look forward to every day.”"],
+    ["Thabo K.","Johannesburg","“The activities are simple to understand and gave us a fun way to spend learning time together.”"],
+    ["Lerato S.","Pretoria","“I love having something ready to use when we want a screen-free learning activity.”"]
+   ].map(([n,c,q],i)=><article className="testimonial reveal" key={n}><div className="avatar">{["NM","TK","LS"][i]}</div><div className="stars">★★★★★</div><p>{q}</p><strong>{n}</strong><small>{c} · Sample testimonial</small></article>)}</div></section>
+
+   <section id="offer" className="offer"><div className="offer-head reveal"><span className="eyebrow light">SPECIAL SOUTH AFRICAN OFFER</span><h2>Give Your Child a More <strong>Exciting Way to Learn</strong></h2><p>One simple digital resource. Use it at home, print it when needed, and learn at your own pace.</p></div>
+    <div className="offer-options"><article className="offer-option"><span className="offer-tag">BASIC</span><h3>Neuro Kids</h3><div className="offer-price">R67</div><ul><li>✓ Educational activities</li><li>✓ Focus & learning activities</li><li>✓ Child-friendly design</li><li>✓ Instant digital access</li></ul><a className="price-btn" href="#checkout">Get Neuro Kids — R67</a></article>
+    <article className="offer-option popular"><label>MOST POPULAR</label><span className="offer-tag">PREMIUM</span><h3>Neuro Kids Premium</h3><div className="offer-price">R99</div><ul><li>✓ Everything in Basic</li><li>✓ Extended activity collection</li><li>✓ Bonus learning resources</li><li>✓ Extra parent resources</li><li>✓ Lifetime digital access</li></ul><a className="price-btn" href="#checkout">Get Premium — R99 →</a></article></div>
+    <div id="checkout" className="checkout-note">🔒 Secure checkout &nbsp; • &nbsp; ⚡ Instant access &nbsp; • &nbsp; 🖨️ Printable digital product</div>
+   </section>
+
+   <section className="guarantee section"><div className="guarantee-card reveal"><div className="guarantee-icon">✓</div><div><span className="eyebrow">PEACE OF MIND</span><h2>A simple, <span>parent-friendly</span> purchase.</h2><p>Neuro Kids is an educational resource, not a medical treatment or diagnosis. Use it as a practical support for learning and play at home.</p></div></div></section>
+
+   <section id="faq" className="section faq"><div className="section-head centered reveal"><span className="eyebrow">FAQ</span><h2>Everything you need to <span>know.</span></h2></div><div className="faq-list reveal">
+    <details open><summary>What is Neuro Kids?</summary><p>Neuro Kids is a digital collection of engaging, printable learning activities designed to make learning at home more enjoyable.</p></details>
+    <details><summary>What age group is it suitable for?</summary><p>The exact age guidance depends on the activity pack. Check the product information for the age range of the version you purchase.</p></details>
+    <details><summary>How do I receive the product?</summary><p>After completing your purchase, access instructions are provided digitally. There is no physical product shipment.</p></details>
+    <details><summary>Do I need teaching experience?</summary><p>No. The activities are designed to be straightforward for parents and children to use together.</p></details>
+    <details><summary>Does Neuro Kids require screens?</summary><p>The activities are designed to work as printable, screen-free learning resources once downloaded.</p></details>
+   </div></section>
+
+   <section className="final-cta"><div className="final-copy reveal"><span className="eyebrow light">START TODAY</span><h2>Make Learning More Fun for Your Child</h2><p>Give your child an engaging way to explore, learn and grow.</p><a className="btn white-btn" href="#offer">Discover Neuro Kids →</a></div><img src={images.hero} alt="Happy children learning together" className="final-image reveal"/></section>
+  </main>
+  <footer><div><a className="brand" href="#home">🧠 <span>Neuro Kids</span></a><p>Playful learning for growing minds.</p></div><div className="footer-links"><a href="#home">Home</a><a href="#inside">Benefits</a><a href="#how">How It Works</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div><small>© 2026 Neuro Kids. All rights reserved.</small></footer>
+ </div>
 }
